@@ -83,3 +83,9 @@ enable_uart=1
 dtoverlay=pi3-disable-bt
 
 [ALL]
+hdmi_force_hotplug=1
+hdmi_cvt=640 480 60 1 0 0 0
+hdmi_group=2
+hdmi_mode=1
+hdmi_mode=87
+dtoverlay=pwm

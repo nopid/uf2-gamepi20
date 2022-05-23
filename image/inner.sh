@@ -54,6 +54,9 @@ fi
 #cp -r sq/* $r/
 #cp -ra sq /build/
 
+# copy fbtft stuff
+tar zx --wildcards -C $r -f /build/built/modules0.tar.gz '*/kernel/drivers/video/fbdev/core/*' '*/drivers/staging/fbtft/*'
+
 cp -r /build/image/rootfs/* $r/
 cp /build/uf2daemon/uf2d $r/sbin/
 

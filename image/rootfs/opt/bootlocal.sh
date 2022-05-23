@@ -9,6 +9,12 @@ echo ondemand > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 
 # Load modules
 /sbin/modprobe i2c-dev
+/sbin/modprobe spi-bcm2835
+/sbin/modprobe flexfb
+/sbin/modprobe fbtft_device
+
+# Start LCD screen
+/usr/sbin/fbcp &
 
 /opt/menustart.sh &
 

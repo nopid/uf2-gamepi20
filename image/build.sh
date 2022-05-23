@@ -14,6 +14,7 @@ if [ "X$f" = X ] ; then
   for t in $TCZ3 ; do
     test -f ../built/tcz3/$t.tcz || curl http://www.tinycorelinux.net/10.x/armv7/tcz/$t.tcz > ../built/tcz3/$t.tcz
   done
+  test -f ../built/modules0.tar.gz || curl http://www.tinycorelinux.net/9.x/armv6/releases/RPi/src/kernel/4.9.22-piCore_modules.tar.xz | xzcat | gzip -c > ../built/modules0.tar.gz
   test -f ../built/modules.tar.gz || curl http://tinycorelinux.net/11.x/armv7/releases/RPi/src/kernel/modules.tar.gz > ../built/modules.tar.gz
   cp ../built/tcz{,3}/gdb.tcz
 
