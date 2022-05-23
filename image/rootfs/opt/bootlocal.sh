@@ -7,17 +7,17 @@
 # Set CPU frequency governor to ondemand (default is performance)
 echo ondemand > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 
+# Choose audio output
+amixer cset numid=3 1
+
 # Load modules
 /sbin/modprobe i2c-dev
 /sbin/modprobe spi-bcm2835
 /sbin/modprobe flexfb
 /sbin/modprobe fbtft_device
 
-# Start LCD screen
-/usr/sbin/fbcp &
-
+/opt/fbcpstart.sh &
 /opt/menustart.sh &
 
 # ------ Put other system startup commands below this line
-
 

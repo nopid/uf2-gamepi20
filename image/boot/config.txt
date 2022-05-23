@@ -29,7 +29,7 @@ cmdline cmdline3.txt
 
 # uncomment this if your display has a black border of unused pixels visible
 # and your display can output without overscan
-disable_overscan=1
+#disable_overscan=1
 
 # uncomment the following to adjust overscan. Use positive numbers if console
 # goes off screen, and negative if there is too much border
@@ -72,6 +72,10 @@ dtparam=i2c=on,spi=on,i2s=on
 # Enable onboard audio
 
 dtparam=audio=on
+gpu_mem_256=128
+gpu_mem_512=256
+gpu_mem_1024=256
+overscan_scale=1
 dtoverlay=dwc2
 
 # Enable serial console
@@ -89,3 +93,4 @@ hdmi_group=2
 hdmi_mode=1
 hdmi_mode=87
 dtoverlay=pwm
+hdmi_drive=1
