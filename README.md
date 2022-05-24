@@ -1,4 +1,17 @@
-# UF2 Flashing for Linux
+# UF2 Flashing for Linux: GamePi20 Edition
+
+This branch is a fork of the official UF2 Flashing for Linux repository.
+Its purpose is to provide a working solution for the GamePi20 case with
+a Pi Zero system. The main changes are:
+ - provide a cfg/gamepi20/arcade.cfg buttons configuration file;
+ - modify image/boot/config.txt for audio and video;
+ - add LCD display modules inside the image;
+ - add the following binary elements:
+    + fbcp binary from the retropie 4.4 image;
+    + pwm-audio-pi-zero-overlay.dtbo for audio PWM setup
+      (from https://github.com/ian57/pwm-audio-pizero);
+ - adapt bootlocal.sh starting script.
+
 
 This repo contains scripts and patches to build a sample Linux image
 based on [piCore](http://www.tinycorelinux.net/ports.html)
