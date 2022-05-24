@@ -9,6 +9,6 @@ modprobe nbd
 modprobe dwc2
 modprobe libcomposite
 mkdir /sd
-mount /dev/mmcblk0p1 /sd/
+mount -o rw,errors=continue /dev/mmcblk0p1 /sd/
 /sbin/uf2d /dev/nbd0
 /opt/bootlocal.sh &
