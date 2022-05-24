@@ -8,7 +8,8 @@
 echo ondemand > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 
 # Choose audio output
-amixer cset numid=3 1
+/usr/local/bin/amixer cset numid=3 1
+/usr/local/bin/amixer cset numid=1 50%
 
 # Load modules
 /sbin/modprobe i2c-dev
